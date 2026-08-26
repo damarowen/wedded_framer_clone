@@ -5,7 +5,7 @@ import Image from "next/image"
 import { useInView } from "@/hooks/useInView"
 import { FlipIcon } from "./icons"
 
-const ASSET = "/sites/wedded-framer-website-6500aaa5/root-8a5edab2/images"
+const ASSET = "/wedded_framer_clone/sites/wedded-framer-website-6500aaa5/root-8a5edab2/images"
 
 type Story = {
   title: string

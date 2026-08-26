@@ -6,7 +6,7 @@ import { useScrollProgress } from "@/hooks/useScrollProgress"
 import { useScrollScale } from "@/hooks/useScrollScale"
 import { HeartIcon } from "./icons"
 
-const ASSET = "/sites/wedded-framer-website-6500aaa5/root-8a5edab2/images"
+const ASSET = "/wedded_framer_clone/sites/wedded-framer-website-6500aaa5/root-8a5edab2/images"
 
 const TIMELINE = [
   {
