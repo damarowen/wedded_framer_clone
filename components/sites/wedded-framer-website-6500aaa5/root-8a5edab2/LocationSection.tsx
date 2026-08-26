@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { ArrowLeftIcon, ArrowRightIcon } from "../shared/icons"
 
-const ASSET = "/sites/wedded-framer-website-6500aaa5/root-8a5edab2/images"
+const ASSET = "/wedded_framer_clone/sites/wedded-framer-website-6500aaa5/root-8a5edab2/images"
 
 const SLIDES = [
   `${ASSET}/location-1.jpg`,
