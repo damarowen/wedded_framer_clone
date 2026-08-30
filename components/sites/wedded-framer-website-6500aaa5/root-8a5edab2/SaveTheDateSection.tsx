@@ -1,8 +1,10 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { Fragment, useEffect, useState } from "react"
+import Image from "next/image"
+import coupleIllustration from "@/public/sites/wedded-framer-website-6500aaa5/root-8a5edab2/images/couple-illustration.svg"
 
-const WEDDING_DATE = new Date("2026-08-15T00:00:00")
+const WEDDING_DATE = new Date("2027-08-15T00:00:00")
 
 function getTimeLeft() {
   const diff = Math.max(0, WEDDING_DATE.getTime() - Date.now())
@@ -34,6 +36,16 @@ export function SaveTheDateSection() {
   return (
     <section className="bg-wedded-bg px-6 py-24 md:py-32">
       <div className="mx-auto max-w-2xl text-center">
+        <div className="mb-4 flex justify-center">
+          <Image
+            src={coupleIllustration}
+            alt=""
+            width={277}
+            height={220}
+            className="h-auto w-[220px] md:w-[277px]"
+            aria-hidden="true"
+          />
+        </div>
         <h2
           className="font-serif text-4xl font-normal leading-[1.2] text-wedded-burgundy md:text-[56px]"
           style={{ letterSpacing: "-0.03em" }}
@@ -47,19 +59,27 @@ export function SaveTheDateSection() {
           venue, what to wear, where to stay, and your RSVP. We can&apos;t wait to
           see you in Florence this August!
         </h3>
-        <div className="mx-auto mt-12 grid max-w-md grid-cols-4 gap-4">
-          {units.map((unit) => (
-            <div key={unit.label} className="flex flex-col items-center">
-              <span className="font-serif text-[48px] font-normal leading-none text-wedded-burgundy">
-                {pad(unit.value)}
-              </span>
-              <span
-                className="mt-2 text-xs font-medium lowercase text-wedded-burgundy"
-                style={{ fontFamily: "var(--font-inter)", letterSpacing: "-0.01em" }}
-              >
-                {unit.label}
-              </span>
-            </div>
+        <div className="mx-auto mt-12 flex max-w-md items-center justify-center gap-2 sm:gap-6">
+          {units.map((unit, i) => (
+            <Fragment key={unit.label}>
+              {i > 0 && (
+                <div
+                  aria-hidden
+                  className="hidden h-10 w-px bg-wedded-burgundy sm:block"
+                />
+              )}
+              <div className="flex w-[72px] flex-col items-center sm:w-[100px]">
+                <span className="font-serif text-[40px] font-normal leading-none text-wedded-burgundy sm:text-[68px]">
+                  {pad(unit.value)}
+                </span>
+                <span
+                  className="mt-1 text-xs font-medium lowercase opacity-70 text-wedded-burgundy"
+                  style={{ fontFamily: "var(--font-inter)", letterSpacing: "-0.01em" }}
+                >
+                  {unit.label}
+                </span>
+              </div>
+            </Fragment>
           ))}
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-const WEDDING_DATE = new Date("2026-08-15T00:00:00")
+const WEDDING_DATE = new Date("2027-08-15T00:00:00")
 const pad = (n: number) => String(n).padStart(2, "0")
 
 const LINKS = [
